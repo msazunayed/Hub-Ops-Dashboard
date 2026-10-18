@@ -70,3 +70,22 @@ Status cells on `Summary` turn green, amber or red against these targets.
 ## Named ranges
 
 `P_ID`, `P_Date`, `P_Svc`, `P_Zone`, `P_Due` (Parcels) · `A_ID`, `A_Date`, `A_No`, `A_Out`, `A_Reason`, `A_Svc`, `A_Zone`, `A_OT` (Attempts) · `SLA_Target`, `Att_Target`, `FA_Target`, `ReportDate`, `SvcCrit`, `ZoneCrit` (Assumptions)
+
+
+## Generate charts
+
+Rebuilds the four dashboard charts as PNG files from the workbook data.
+
+```
+pip install -r requirements.txt
+python charts.py
+```
+
+Charts are saved to the `charts/` folder. Options:
+
+```
+python charts.py --service Express --zone North
+python charts.py --report-date 2026-10-10
+python charts.py --out my_charts
+python charts.py path/to/other_workbook.xlsx
+```
